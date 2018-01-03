@@ -7,7 +7,7 @@ abstract class Element {
 }
 
 class ArrayElement(val contents: Array[String]) extends Element {
-  require(if (height != 0) contents.map(_ length).forall(_ == contents.head.length) else true)
+  require(if (height != 0) contents.map(_.length).forall(_ == contents.head.length) else true)
 }
 
 class LineElement(s: String) extends ArrayElement(Array(s)) {
