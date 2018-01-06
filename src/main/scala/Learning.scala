@@ -13,4 +13,6 @@ object Learning extends App {
   private val diffHeights: Element = elem(Array("one", "two")) beside elem(Array("one"))
 
   println(diffHeights)
+
+  println(null)
 }
