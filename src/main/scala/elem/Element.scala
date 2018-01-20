@@ -1,4 +1,6 @@
-import Element.elem
+package elem
+
+import elem.Element.elem
 
 abstract class Element {
   def contents: Array[String]
@@ -76,4 +78,18 @@ object Element {
 
   def elem(line: String): Element =
     new LineElement(line)
+
+  def main(args: Array[String]): Unit = {
+    val arrayElement = elem(Array("test"))
+
+    println(s"Height is ${arrayElement.height} and width is ${arrayElement.width}")
+
+    val diffWidths: Element = elem(Array("hello")) above elem(Array("world!"))
+
+    println(diffWidths)
+
+    val diffHeights: Element = elem(Array("one", "two")) beside elem(Array("one"))
+
+    println(diffHeights)
+  }
 }
